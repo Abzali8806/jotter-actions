@@ -1,0 +1,15 @@
+# created by virtualenv automatically
+
+# https://wwww.gitignore.io/api/django 
+### Django ###
+*.log
+*.pot
+*.pyc
+src/__pycache__/
+src/local_settings.py
+db.sqlite3
+db.sqlite3-journal
+src/media
+bin/
+lib/
+pyvenv.cfg

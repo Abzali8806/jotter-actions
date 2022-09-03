@@ -1,0 +1,11 @@
+.outer-form-box {
+    width: 60%;
+    border: 2px solid red;
+}
+
+.model-forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: C;
+}

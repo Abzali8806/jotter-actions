@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <h3>Welcome {{ user.username }}</h3>
+    
+    <div class="profile-post-container">
+        {% for post in posts %}
+            {% if user.user == post.user %}
+                <div class="inner-profile-post-container">
+                    <p>{{ post.title }}</p>
+                    <small>{{ post.user }}</small>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<nav>
+    <div class="nav-item logo">
+        <a class="btn logo-btn" id="home"  href="{% url 'home' %}"><h1>Jotter</h1></a>
+    </div>
+    <form class="nav-item" action="{% url 'blog' %}" method="get">
+        <input type="search" name="sc" class="form-el search-inp" placeholder="Search Post or Category...">
+        <button class="form-el search-btn">Search</button>
+    </form>
+    <div class="nav-item nav-links">
+        <a class="link-btn" href="{% url 'user_profile' %}">Profile</a>
+        <a class="link-btn" href="{% url 'create_post' %}">New Post</a>
+        <a class="link-btn" href="{% url 'sign_up' %}">Sign Up</a>
+    </div>
+</nav>

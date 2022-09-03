@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="outer-form-box">
+    <div class="display-heading">
+        <h2>Create Post</h2>
+    </div>
+    <form class="model-forms" action="" method="post"> 
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}

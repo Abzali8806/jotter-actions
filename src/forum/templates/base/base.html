@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <!-- google fonts -->
+    <!-- header font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <!-- css stylesheets -->
+    <link rel = 'stylesheet' href = "{% static 'css/base.css' %}">
+    <link rel = 'stylesheet' href = "{% static 'css/forms.css' %}">
+    <title>Jotter</title>
+</head>
+<body>
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            {% endfor %}
+        {% endif %}
+            {% include 'base/navbar.html' %}
+        <div class="inner_container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

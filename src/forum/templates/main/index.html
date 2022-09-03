@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="display-heading">
+    <h2>Search results...</h2>
+</div>
+<div class="display dis-home">
+    <h2>Popular Posts</h2>
+    {% for id in pids %}
+        {% for post in posts %}
+            {% if id == post.id %}
+                <div class="post-container p-return-vals">
+                    <div class="post-img">
+                        <img src="../../static/image/remotar-jobs-s5kTY-Ve1c0-unsplash.jpg" alt="party">
+                    </div>
+                    <div class="post-author txt-flds">
+                        <h4>{{ post.user }}</h4>
+                    </div>
+                    <div class="post-date-added txt-flds">
+                        <small>{{ post.date_added }}</small>
+                    </div>
+                    <div class="post-title txt-flds">
+                        <h3>{{ post.title }}</h3>
+                    </div>
+                    <div class="post-intro txt-flds">
+                        <p>{{ post.intro }}</p>
+                    </div>
+                    <div class="post-readmore txt-flds">
+                        <a href="#">Read more...</a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="display-heading">
+    <h2>Blog result</h2>
+</div>
+<div class="display dis-blog">
+    {% for post in posts %}
+        {% if search == post.title or search == post.category %}
+            <div class="post-container p-return-vals"> <!-- id for javascript dom manipulation -->
+                <div class="post-img">
+                    <img src="../../static/image/bday-party.jpg" alt="party">
+                </div>
+                <div class="post-title txt-flds">
+                    <h3>{{ post.title }}</h3>
+                </div>
+                <div class="post-author txt-flds">
+                    <h4>{{ post.user }}</h4>
+                </div>
+                <div class="post-intro txt-flds">
+                    <p>{{ post.intro }}</p>
+                </div>
+                <div class="post-date-added txt-flds">
+                    <small>{{ post.date_added }}</small>
+                </div>
+                <div class="post-readmore txt-flds">
+                    <a href="#">Read more...</a>
+                </div>
+            </div>
+        {% endif %}
+        <!-- Use javascript to get content of looped div and display "Sorry for record for x" 
+        if post doesn't meet the right criteria -->
+    {% endfor %}
+</div>
+
+{% endblock %}
