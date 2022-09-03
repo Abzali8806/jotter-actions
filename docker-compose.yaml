@@ -4,4 +4,4 @@ services:
     build:
       context: ./src
       dockerfile: Dockerfile
-  image: jotter-app:t2
+    image: jotter-app:t2
